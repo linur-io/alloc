@@ -1,0 +1,5 @@
+alloc is part of the linur kernel project and is released under
+GPL-3.0-only. The frame allocator is deliberately kept as a freestanding C leaf
+module: it is pure bookkeeping over a caller-owned map, so C expresses it in a
+few dozen lines and gives the Rust kernel a stable, libc-free ABI at the module
+boundary.
