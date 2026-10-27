@@ -1,4 +1,7 @@
-CC ?= clang
+# make predefines CC=cc, so "?=" would never fire; replace only that built-in default.
+ifeq ($(origin CC),default)
+CC := clang
+endif
 CLANG_FORMAT ?= clang-format
 LDFLAGS ?= -no-pie
 
